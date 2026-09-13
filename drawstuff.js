@@ -401,27 +401,27 @@ function main() {
 
     // 3. Added ambient, diffuse, and specular terms to all four rectangle vertices
     var tlAttribs = { 
-        ambient: new Color(0, 0, 50), 
+        ambient: new Color(10, 0, 50), 
         diffuse: new Color(0, 0, 205), 
-        specular: new Color(255, 255, 255), 
+        specular: new Color(185, 255, 125), 
         shininess: 32 
     };
     var trAttribs = { 
         ambient: new Color(0, 0, 50), 
-        diffuse: new Color(0, 0, 205), 
-        specular: new Color(255, 255, 255), 
+        diffuse: new Color(20, 0, 205), 
+        specular: new Color(150, 55, 255), 
         shininess: 32 
     };
     var brAttribs = { 
-        ambient: new Color(0, 0, 50), 
+        ambient: new Color(30, 0, 50), 
         diffuse: new Color(0, 0, 205), 
-        specular: new Color(255, 255, 255), 
+        specular: new Color(255, 255, 155), 
         shininess: 32 
     };
     var blAttribs = { 
         ambient: new Color(0, 0, 50), 
-        diffuse: new Color(0, 0, 205), 
-        specular: new Color(255, 255, 255), 
+        diffuse: new Color(0, 40, 205), 
+        specular: new Color(255, 25, 255), 
         shininess: 32 
     };
 
