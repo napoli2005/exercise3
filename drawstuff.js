@@ -393,7 +393,7 @@ function main() {
     // Define a rectangle in 2D with colors and coords at corners
     var globals = { 
         // 1. Moved light to the center of the rect (100, 125) and closer (Z = 15)
-        lightPos: new Vector(180, 50, 15),  
+        lightPos: new Vector(130, 20, 15),  
         lightCol: new Color(50, 180, 160),
         // 2. Added global ambient light color
         ambientCol: new Color(20, 75, 50) 
