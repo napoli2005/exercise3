@@ -391,12 +391,40 @@ function main() {
     var imagedata = context.createImageData(w,h);
  
     // Define a rectangle in 2D with colors and coords at corners
-    var globals = { lightPos: new Vector(100,100,50),  // light over left upper rect
-                    lightCol: new Color(255,255,255)}; // light is white
-    var tlAttribs = { diffuse: new Color(0,0,255)};    // all four rect verts blue
-    var trAttribs = { diffuse: new Color(0,0,255)};
-    var brAttribs = { diffuse: new Color(0,0,255)};
-    var blAttribs = { diffuse: new Color(0,0,255)};
-    interpRect(imagedata,50,150,50,200,globals,tlAttribs,trAttribs,brAttribs,blAttribs);
-    context.putImageData(imagedata,0,0); // display the image in the context
+    var globals = { 
+        // 1. Moved light to the center of the rect (100, 125) and closer (Z = 15)
+        lightPos: new Vector(100, 125, 15),  
+        lightCol: new Color(255, 255, 255),
+        // 2. Added global ambient light color
+        ambientCol: new Color(50, 50, 50) 
+    };
+
+    // 3. Added ambient, diffuse, and specular terms to all four rectangle vertices
+    var tlAttribs = { 
+        ambient: new Color(0, 0, 50), 
+        diffuse: new Color(0, 0, 205), 
+        specular: new Color(255, 255, 255), 
+        shininess: 32 
+    };
+    var trAttribs = { 
+        ambient: new Color(0, 0, 50), 
+        diffuse: new Color(0, 0, 205), 
+        specular: new Color(255, 255, 255), 
+        shininess: 32 
+    };
+    var brAttribs = { 
+        ambient: new Color(0, 0, 50), 
+        diffuse: new Color(0, 0, 205), 
+        specular: new Color(255, 255, 255), 
+        shininess: 32 
+    };
+    var blAttribs = { 
+        ambient: new Color(0, 0, 50), 
+        diffuse: new Color(0, 0, 205), 
+        specular: new Color(255, 255, 255), 
+        shininess: 32 
+    };
+
+    interpRect(imagedata, 50, 150, 50, 200, globals, tlAttribs, trAttribs, brAttribs, blAttribs);
+    context.putImageData(imagedata, 0, 0); // display the image in the context
 } // end main
